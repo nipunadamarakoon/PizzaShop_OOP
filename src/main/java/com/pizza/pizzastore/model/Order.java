@@ -6,21 +6,21 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "order")
+@Table(name = "order_tbl")
 public class Order {
     @Id
-    @Column(name = "oid", nullable = false, unique = true, columnDefinition = "VARCHAR(12)")
-    private String oid;
+    @Column(name = "orderId", nullable = false, unique = true, columnDefinition = "VARCHAR(12)")
+    private String orderId;
     private String name;
     private String address;
     private double amount;
 
-    public String getOid() {
-        return oid;
+    public String getOrderId() {
+        return orderId;
     }
 
-    public void setOid(String oid) {
-        this.oid = oid;
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
     }
 
     public String getName() {
@@ -46,9 +46,4 @@ public class Order {
     public void setAmount(double amount) {
         this.amount = amount;
     }
-
-
-
-
-
 }

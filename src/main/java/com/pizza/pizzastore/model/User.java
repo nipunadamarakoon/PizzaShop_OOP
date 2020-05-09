@@ -9,21 +9,21 @@ import javax.persistence.Table;
 @Table(name = "user")
 public class User {
     @Id
-    @Column(name = "uid", nullable = false, unique = true, columnDefinition = "VARCHAR(12)")
-    private String uid;
+    @Column(name = "userId", nullable = false, unique = true, columnDefinition = "VARCHAR(12)")
+    private String userId;
     private String name;
     private String email;
     private String password;
     private String address;
     private String type;
-    private String pnumber;
+    private String phone;
 
-    public String getUid() {
-        return uid;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUid(String uid) {
-        this.uid = uid;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getName() {
@@ -66,14 +66,11 @@ public class User {
         this.type = type;
     }
 
-    public String getPnumber() {
-        return pnumber;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPnumber(String pnumber) {
-        this.pnumber = pnumber;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
-
-
-
 }
