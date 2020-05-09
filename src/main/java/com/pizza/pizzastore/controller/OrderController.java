@@ -16,4 +16,12 @@ public class OrderController {
     public Order addNewOrder(@RequestBody Order newOrder){
         return orderRepository.save(newOrder);
     }
+    @GetMapping(path = "/get/{id}")
+    public Order getOrder(@PathVariable String id){
+        return orderRepository.getByOrderId(id);
+    }
+    @GetMapping(path = "/get-all")
+    public Iterable<Order> getAllOrders() {
+        return orderRepository.findAll();
+    }
 }
